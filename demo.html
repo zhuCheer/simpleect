@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>fiveonejQuery综合插件</title>
+<link href="css.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<table width="900" border="0" align="center" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>fiveone jQuery综合插件 </td>
+  </tr>
+  <tr>
+    <td>点此下载：<a href="jquery.fiveone.min.js" target="_blank">jquery.fiveone.min.js</a></td>
+  </tr>
+  <tr>
+    <td><strong>介绍：</strong><br />
+    	作者：zhuCheer<br />
+
+        此插件综合了常用的各类页面效果，目前此版本支持图片滚动、页面浮标、文字展开收起效果，效果还在不断更新，敬请关注。
+        
+</td>
+  </tr>
+  <tr>
+    <td><strong>使用前准备：</strong><br />
+	页面必需调用jQuery和fiveone插件文件，才能正常使用fiveone插件。
+    <br />
+
+    开始：
+   <div class="cnblogs_code" >
+<pre>&lt;script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.2.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="jquery.fiveone.min.js"&gt;&lt;/script&gt;<span style="color: #008000;">//这里请注意文件路径</span>
+&lt;script type="text/javascript"&gt;<span style="color: #000000;">
+$(</span><span style="color: #0000ff;">function</span><span style="color: #000000;">(){
+
+</span><span style="color: #008000;">//</span><span style="color: #008000;">这里添加你自己的代码</span>
+<span style="color: #000000;">
+});
+</span>&lt;/script&gt;</pre>
+</div>
+
+   	
+</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><strong>示例：</strong><br />
+		
+        设置一个浮动层在页面上：<a href="floatdiv.html">Demo</a>
+<div class="cnblogs_code">
+  <pre>&lt;script type="text/javascript"&gt;<span style="color: #000000;">
+$(</span><span style="color: #0000ff;">function</span><span style="color: #000000;">(){
+$(</span>"#floatDiv"<span style="color: #000000;">).floatBox();
+});
+</span>&lt;/script&gt;</pre>
+</div><br />
+<strong>使用方法及参数设置：</strong><br />
+
+<img src="images/d1.jpg" />
+
+</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><strong>各种效果方法介绍：</strong>
+    <div class="cnblogs_code">
+  <pre>&lt;script type="text/javascript"&gt;<span style="color: #000000;">
+$(</span><span style="color: #0000ff;">function</span><span style="color: #000000;">(){
+$(</span>"#floatDiv"<span style="color: #000000;">).floatBox();
+});
+</span>&lt;/script&gt;</pre>
+</div>
+   <table width="80%" border="0" cellspacing="0" cellpadding="0" class="fun">
+   <tr>
+    <td colspan="3" bgcolor="#FFFF99"><strong >效果1：</strong><span class="red">页面浮标效果</span> <strong>$(&quot;selected&quot;).floatBox();
+    </strong><a href="floatdiv.html" target="_blank">Demo</a>
+    </td>
+    </tr>
+      <tr>
+    <td colspan="3" bgcolor="#FFFF99">注意：使用此浮标时，你的div尽量不要有padding值，否则会出现浮层飘到可见区域以外的情况。
+    </td>
+    </tr>
+  <tr>
+    <th width="25%">参数名</th>
+    <th width="16%">默认值</th>
+    <th width="59%">说明</th>
+  </tr>
+  <tr>
+    <td>speed</td>
+    <td>20</td>
+    <td>每次移动单位距离（step）的时间间隔（毫秒），越小效果越流畅。</td>
+  </tr>
+  <tr>
+    <td>position</td>
+    <td>{left:50,top:50}</td>
+    <td>浮层的起始坐标，相对屏幕最左上角。</td>
+  </tr>
+  <tr>
+    <td>step</td>
+    <td>1</td>
+    <td>每次飘动的最小位移量（像素），越小飘动效果越细腻。</td>
+  </tr>
+  <tr>
+    <td>onstop</td>
+    <td>1</td>
+    <td>鼠标经过浮层是否停下来，1：停下来 0：不停</td>
+  </tr>
+</table>
+<br />
+<div class="cnblogs_code">
+<pre>&lt;script type=<span style="color: #800000;">"</span><span style="color: #800000;">text/javascript</span><span style="color: #800000;">"</span>&gt;<span style="color: #000000;">
+$(function(){
+$(</span><span style="color: #800000;">"</span><span style="color: #800000;">#rollDiv1</span><span style="color: #800000;">"</span><span style="color: #000000;">).rollAction();
+});
+</span>&lt;/script&gt;</pre>
+</div>
+<table width="80%" border="0" cellspacing="0" cellpadding="0" class="fun">
+   <tr>
+    <td colspan="3" bgcolor="#FFFF99"><strong >效果2：</strong><span class="red">页面内容横向/纵向滚动效果</span> <strong>$(&quot;selected&quot;).rollAction()
+      <a href="rollAction.html" target="_blank">Demo</a></tr>
+
+  <tr>
+    <th width="25%">参数名</th>
+    <th width="16%">默认值</th>
+    <th width="59%">说明</th>
+  </tr>
+  <tr>
+    <td>speed</td>
+    <td>40</td>
+    <td>每移动一个像素的时间间隔，单位：毫秒，越小速度越快</td>
+  </tr>
+  <tr>
+    <td>direction</td>
+    <td>'left'</td>
+    <td>滚动方向，有：'up'，'down'，’right‘，’left‘四个选项</td>
+  </tr>
+  <tr>
+    <td>onstop</td>
+    <td>1</td>
+    <td>鼠标经过浮层是否停下来，1：停下来 0：不停</td>
+  </tr>
+</table>
+<br />
+<br />
+<div class="cnblogs_code">
+<pre>&lt;script type="text/javascript"&gt;<span style="color: #000000;">
+$(</span><span style="color: #0000ff;">function</span><span style="color: #000000;">(){
+$(</span>"#a"<span style="color: #000000;">).focusImg1();</span><span style="color: #000000;">
+});
+</span>&lt;/script&gt;</pre>
+</div>
+
+<table width="85%" border="0" cellspacing="0" cellpadding="0" class="fun">
+   <tr>
+    <td colspan="3" bgcolor="#FFFF99"><strong >效果3：</strong><span class="red">图片切换效果</span> <strong>$(&quot;selected&quot;).focusImg1()
+      <a href="focusImg.html" target="_blank">Demo</a></tr>
+
+  <tr>
+    <th width="25%">参数名</th>
+    <th width="16%">默认值</th>
+    <th width="59%">说明</th>
+  </tr>
+  <tr>
+    <td>speed</td>
+    <td>3000</td>
+    <td>图片停留的时间，单位：毫秒</td>
+  </tr>
+  <tr>
+    <td>zindex</td>
+    <td>999</td>
+    <td>设置对象的z-index值</td>
+  </tr>
+  <tr>
+    <td>delay</td>
+    <td>800</td>
+    <td>切换时动画效果变化的时间，单位毫秒</td>
+  </tr>
+  <tr>
+    <td>cycle</td>
+    <td>1</td>
+    <td>是否循环，1：循环，0：不循环（放完所有图片就停下来）</td>
+  </tr>
+  <tr>
+    <td>tag</td>
+    <td>&quot;img&quot;</td>
+    <td>设置产生切换效果的标签，默认是图片切换，为图片加上链接，则此项需改成“a”</td>
+  </tr>
+</table><br />
+<br />
+<div class="cnblogs_code">
+<pre>&lt;script type="text/javascript"&gt;<span style="color: #000000;">
+$(</span><span style="color: #0000ff;">function</span><span style="color: #000000;">(){
+$(</span>"img"<span style="color: #000000;">).hoverBtn();</span><span style="color: #000000;">
+});
+</span>&lt;/script&gt;</pre>
+</div>
+
+<table width="85%" border="0" cellspacing="0" cellpadding="0" class="fun">
+   <tr>
+    <td colspan="3" bgcolor="#FFFF99"><strong >效果4：</strong><span class="red">按钮鼠标经过切换图片效果</span> <strong>$(&quot;selected&quot;).hoverBtn()
+      <a href="hoverImg.html" target="_blank">Demo</a></tr>
+
+  <tr>
+   <tr>
+    <td colspan="3" bgcolor="#FFFF99">说明：选择器（”selected“）选择的元素必须是img标签，必须为img元素添加hover属性，属性值填写鼠标经过的图片地址</tr>
+
+  <tr>
+    <th width="25%">参数名</th>
+    <th width="16%">默认值</th>
+    <th width="59%">说明</th>
+  </tr>
+  <tr>
+    <td>type</td>
+    <td>“show”</td>
+    <td>“show”：直接切换没有任何效果 “fade”：切换时有半透明效果</td>
+  </tr>
+</table>
+
+<br />
+<br />
+<div class="cnblogs_code">
+<pre>&lt;script type="text/javascript"&gt;<span style="color: #000000;">
+$(</span><span style="color: #0000ff;">function</span><span style="color: #000000;">(){
+$(</span>"#a"<span style="color: #000000;">).focusImg2();
+});
+</span>&lt;/script&gt;</pre>
+</div>
+
+<table width="85%" border="0" cellspacing="0" cellpadding="0" class="fun">
+   <tr>
+    <td colspan="3" bgcolor="#FFFF99"><strong >效果5：</strong><span class="red">图片切换效果2</span> <strong>$(&quot;selected&quot;).focusImg2()
+      	<a href="focusImg2.html" target="_blank">Demo</a></tr>
+
+  <tr>
+    <th width="25%">参数名</th>
+    <th width="16%">默认值</th>
+    <th width="59%">说明</th>
+  </tr>
+  <tr>
+    <td>speed</td>
+    <td>3000</td>
+    <td>图片停留的时间，单位：毫秒</td>
+  </tr>
+  <tr>
+  	<td>delay</td>
+  	<td>800</td>
+  	<td>切换时动画效果变化的时间，单位毫秒</td>
+  	</tr>
+  <tr>
+    <td>cycle</td>
+    <td>1</td>
+    <td>是否循环，1：循环，0：不循环（放完所有图片就停下来）</td>
+  </tr>
+</table><br />
+    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+   <tr>
+    <td>&nbsp;</td>
+  </tr>
+   <tr>
+    <td>&nbsp;</td>
+  </tr>
+   <tr>
+    <td>&nbsp;</td>
+  </tr>
+
+</table>
+
+</body>
+</html>

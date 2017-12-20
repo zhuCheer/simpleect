@@ -1,0 +1,27 @@
+
+/* CSS Document */
+*{ padding:0; margin:0;-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;  }
+body { font-family:Arial, Helvetica, sans-serif;font-weight:normal; font-size:12px; line-height:23px;color:#444; background:#fcfcfc;}
+img{ border:0;}
+ol,ul,li {list-style: none;}
+caption{text-align:left;}
+img{ border:0;}
+img.ie6{ vertical-align:text-bottom;}
+button {cursor:pointer;}
+.clearfix{ overflow:hidden; zoom:1;}
+h4{font:14px/normal "Microsoft YaHei", "Microsoft JhengHei";color:#000; font-weight:bold;}
+hr{ margin:15px 0 15px 0;}
+.cnblogs_code {
+background-color: whiteSmoke;
+font-family: Courier New;
+font-size: 12px;
+border: 1px solid #CCC;
+padding: 5px;
+height:auto;
+display: block;
+width:98%; margin:0 auto;  margin-bottom:5px;
+}
+.fun,.fun th,.fun td{ border-collapse:collapse; border:#dcdcdc 1px solid;}
+.fun th{ text-align:center; background:#666; color:#FFF;}
+.fun td{ text-indent:12px;}
+.red{ color:#F30;}

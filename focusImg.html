@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>图片切换</title>
+<style type="text/css">img{ border:0;}</style>
+<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="jquery.fiveone.min.js"></script>
+<script type="text/javascript">
+$(function(){
+$("#a").focusImg1();
+$("#b").focusImg1({tag:"a"});
+});
+</script>
+</head>
+
+<body>
+不带链接的
+<div style="width:500px; height:182px; margin-bottom:20px;" id="a">
+<img src="images/pitch-1.jpg" />
+<img src="images/pitch-2.jpg" />
+<img src="images/pitch-3.jpg" />
+</div>
+<br />
+<br />
+带链接的
+<div style="width:500px; height:182px;" id="b"> 
+<a href="#"><img src="images/pitch-1.jpg" /></a>
+<a href="#"><img src="images/pitch-2.jpg" /></a>
+<a href="#"><img src="images/pitch-3.jpg" /></a>
+</div>
+</body>
+</html>
